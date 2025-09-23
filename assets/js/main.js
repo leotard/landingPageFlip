@@ -186,6 +186,24 @@
     applyBillingMode();
   }
 
+  // Auto-hide header on scroll (mobile-friendly)
+  function initAutoHideHeader() {
+    const header = document.querySelector('header[data-autohide]');
+    if (!header) return;
+    let lastY = window.pageYOffset || document.documentElement.scrollTop;
+    function onScroll() {
+      const y = window.pageYOffset || document.documentElement.scrollTop;
+      // Hide when scrolling down, show when scrolling up
+      if (y > lastY && y > 56) {
+        header.classList.add('-translate-y-full');
+      } else {
+        header.classList.remove('-translate-y-full');
+      }
+      lastY = y;
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     // Follow user's system/browser theme by default
     initTheme();
@@ -194,6 +212,7 @@
     initRevealAnimations();
     initSmoothScroll();
     initPricingToggle();
+    initAutoHideHeader();
   });
 })();
 
