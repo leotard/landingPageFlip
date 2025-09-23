@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>From spreadsheets to Flip — Flip Inventory</title>
+    <meta name="description" content="A simple path to accurate inventory without the busywork." />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' };</script>
+  </head>
+  <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+    <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="../index.html" class="flex items-center gap-2"><img src="../assets/logo.svg" class="h-8 w-8" alt="Flip" /><span class="font-extrabold text-xl">Flip Inventory</span></a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="../features.html" class="hover:text-primary-600">Features</a>
+            <a href="../pricing.html" class="hover:text-primary-600">Pricing</a>
+            <a href="./index.html" class="text-primary-600">Blog</a>
+          </nav>
+          <div class="hidden md:flex items-center gap-3">
+            <a href="https://play.google.com/store/apps/details?id=com.flipinventory.app" aria-label="Get on Google Play"><img src="../assets/badges/google-play.svg" class="h-8" alt="Google Play" /></a>
+            <a href="https://apps.apple.com/tr/app/flip-inventory/id6692609544" aria-label="Download on App Store"><img src="../assets/badges/app-store.svg" class="h-8" alt="App Store" /></a>
+          </div>
+          <button data-mobile-menu-toggle class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-700" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+        </div>
+      </div>
+      <div id="mobile-menu" data-mobile-menu class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+        <div class="px-4 py-3 space-y-2">
+          <a href="../features.html" class="block py-2">Features</a>
+          <a href="../pricing.html" class="block py-2">Pricing</a>
+          <a href="./index.html" class="block py-2">Blog</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article class="prose prose-slate dark:prose-invert max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1>From spreadsheets to Flip</h1>
+        <p><em>A simple path to accurate inventory without the busywork.</em></p>
+        <h2>Why move?</h2>
+        <p>Spreadsheets are flexible but fragile. Flip gives you orders, alerts, and automatic updates that keep data trustworthy.</p>
+        <h2>Quick start</h2>
+        <ol>
+          <li>Import your items with current counts.</li>
+          <li>Set minimums for critical items.</li>
+          <li>Create your first purchase or sales order.</li>
+        </ol>
+        <p>As you complete orders, Flip keeps inventory levels accurate across locations.</p>
+      </article>
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+        <a href="./index.html" class="text-primary-600">← Back to blog</a>
+      </div>
+    </main>
+
+    <footer class="py-10 border-t border-slate-200 dark:border-slate-800 mt-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm">
+        <a href="../index.html" class="font-semibold">Flip Inventory</a>
+        <div class="mt-2 text-slate-500">© <span id="year"></span> Flip Inventory</div>
+      </div>
+    </footer>
+
+    <script defer src="../assets/js/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+
+

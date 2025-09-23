@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Flip Inventory</title>
+    <meta name="description" content="Contact Flip Inventory team." />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' };</script>
+  </head>
+  <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+    <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="./index.html" class="flex items-center gap-2"><img src="./assets/logo.svg" class="h-8 w-8" alt="Flip" /><span class="font-extrabold text-xl">Flip Inventory</span></a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="./index.html" class="hover:text-primary-600">Home</a>
+            <a href="./pricing.html" class="hover:text-primary-600">Pricing</a>
+            <!-- Blog dropdown temporarily disabled -->
+            <a href="./contact.html" class="text-primary-600">Contact</a>
+          </nav>
+          <div class="hidden md:flex items-center gap-3">
+            <a href="https://play.google.com/store/apps/details?id=com.flipinventory.app" aria-label="Get on Google Play"><img src="./assets/badges/google-play.svg" class="h-8" alt="Google Play" /></a>
+            <a href="https://apps.apple.com/tr/app/flip-inventory/id6692609544" aria-label="Download on App Store"><img src="./assets/badges/app-store.svg" class="h-8" alt="App Store" /></a>
+          </div>
+          <button data-mobile-menu-toggle class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-700" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+        </div>
+      </div>
+      <div id="mobile-menu" data-mobile-menu class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+        <div class="px-4 py-3 space-y-2">
+          <a href="./index.html" class="block py-2">Home</a>
+          <a href="./pricing.html" class="block py-2">Pricing</a>
+          <!-- Blog links disabled for now
+          <div>
+            <div class="text-xs uppercase tracking-wide text-slate-500">Blog</div>
+            <div class="mt-1 grid grid-cols-2 gap-2 text-sm">
+              <a href="./blog/index.html" class="py-2">All Articles</a>
+              <a href="./blog/inventory/index.html" class="py-2">Inventory</a>
+              <a href="./blog/overstocking/index.html" class="py-2">Overstocking</a>
+              <a href="./blog/stockouts/index.html" class="py-2">Stockouts</a>
+              <a href="./blog/orders/index.html" class="py-2">Orders</a>
+            </div>
+          </div>
+          -->
+          <a href="./contact.html" class="block py-2">Contact</a>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://play.google.com/store/apps/details?id=com.flipinventory.app" aria-label="Get on Google Play"><img src="./assets/badges/google-play.svg" class="h-8" alt="Google Play" /></a>
+            <a href="https://apps.apple.com/tr/app/flip-inventory/id6692609544" aria-label="Download on App Store"><img src="./assets/badges/app-store.svg" class="h-8" alt="App Store" /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-16 sm:py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-3xl sm:text-4xl font-extrabold">Contact</h1>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">We'd love to hear from you.</p>
+        </div>
+      </section>
+      <section class="pb-24">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+            <div class="text-sm text-slate-500">Email</div>
+            <div class="text-lg font-semibold">support@flipinventory.app</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm">
+        <a href="./index.html" class="font-semibold">Flip Inventory</a>
+        <div class="mt-2 text-slate-500">© <span id="year"></span> Flip Inventory</div>
+      </div>
+    </footer>
+
+    <script defer src="./assets/js/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+
+

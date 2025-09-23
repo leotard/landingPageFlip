@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Flip Inventory Blog</title>
+    <link>https://flip-9lv.pages.dev/blog/</link>
+    <description>Tips and updates from Flip Inventory</description>
+    <language>en-us</language>
+    <item>
+      <title>Prevent stockouts with smart alerts</title>
+      <link>https://flip-9lv.pages.dev/blog/post-1.html</link>
+      <guid>https://flip-9lv.pages.dev/blog/post-1.html</guid>
+      <description>How Warning and Critical alerts help you act before items run out.</description>
+    </item>
+    <item>
+      <title>From spreadsheets to Flip</title>
+      <link>https://flip-9lv.pages.dev/blog/post-2.html</link>
+      <guid>https://flip-9lv.pages.dev/blog/post-2.html</guid>
+      <description>A simple path to accurate inventory without the busywork.</description>
+    </item>
+  </channel>
+</rss>
+
+

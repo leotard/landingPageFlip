@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing — Flip Inventory</title>
+    <meta name="description" content="Simple pricing for Flip Inventory with monthly and annual billing." />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: 'class' };
+    </script>
+  </head>
+  <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+    <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="./index.html" class="flex items-center gap-2"><img src="./assets/logo.svg" class="h-8 w-8" alt="Flip" /><span class="font-extrabold text-xl">Flip Inventory</span></a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="./index.html" class="hover:text-primary-600">Home</a>
+            <a href="./pricing.html" class="text-primary-600">Pricing</a>
+            <!-- Blog dropdown temporarily disabled -->
+            <a href="./contact.html" class="hover:text-primary-600">Contact</a>
+          </nav>
+          <div class="hidden md:flex items-center gap-3">
+            <a href="https://play.google.com/store/apps/details?id=com.flipinventory.app" aria-label="Get on Google Play"><img src="./assets/badges/google-play.svg" class="h-8" alt="Google Play" /></a>
+            <a href="https://apps.apple.com/tr/app/flip-inventory/id6692609544" aria-label="Download on App Store"><img src="./assets/badges/app-store.svg" class="h-8" alt="App Store" /></a>
+          </div>
+          <button data-mobile-menu-toggle class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-700" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+        </div>
+      </div>
+      <div id="mobile-menu" data-mobile-menu class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+        <div class="px-4 py-3 space-y-2">
+          <a href="./index.html" class="block py-2">Home</a>
+          <a href="./pricing.html" class="block py-2">Pricing</a>
+          <!-- Blog links disabled for now
+          <div>
+            <div class="text-xs uppercase tracking-wide text-slate-500">Blog</div>
+            <div class="mt-1 grid grid-cols-2 gap-2 text-sm">
+              <a href="./blog/index.html" class="py-2">All Articles</a>
+              <a href="./blog/inventory/index.html" class="py-2">Inventory</a>
+              <a href="./blog/overstocking/index.html" class="py-2">Overstocking</a>
+              <a href="./blog/stockouts/index.html" class="py-2">Stockouts</a>
+              <a href="./blog/orders/index.html" class="py-2">Orders</a>
+            </div>
+          </div>
+          -->
+          <a href="./contact.html" class="block py-2">Contact</a>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://play.google.com/store/apps/details?id=com.flipinventory.app" aria-label="Get on Google Play"><img src="./assets/badges/google-play.svg" class="h-8" alt="Google Play" /></a>
+            <a href="https://apps.apple.com/tr/app/flip-inventory/id6692609544" aria-label="Download on App Store"><img src="./assets/badges/app-store.svg" class="h-8" alt="App Store" /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-16 sm:py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-3xl sm:text-4xl font-extrabold">Simple pricing</h1>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Choose monthly or save with annual billing. All prices are in USD.</p>
+        </div>
+        <div class="mt-8 flex items-center justify-center gap-3">
+          <span class="text-sm">Monthly</span>
+          <label class="inline-flex items-center cursor-pointer">
+            <input id="billingToggle" type="checkbox" class="sr-only peer" />
+            <div class="w-12 h-6 bg-slate-300 peer-checked:bg-primary-600 rounded-full relative after:content-[''] after:absolute after:h-5 after:w-5 after:bg-white after:rounded-full after:top-0.5 after:left-0.5 peer-checked:after:translate-x-6 after:transition"></div>
+          </label>
+          <span class="text-sm">Annual <span class="text-emerald-600 font-medium">(save 50%)</span></span>
+        </div>
+      </section>
+
+      <section class="pb-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+            <div class="text-sm font-semibold text-slate-500">Free Plan (Starter)</div>
+            <div class="mt-2 text-3xl font-extrabold">
+              <span data-monthly>$0</span>
+              <span data-annual class="hidden">$0</span>
+              <span class="text-base font-medium text-slate-500">/user/month</span>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <li>1 user</li>
+              <li>50 Products</li>
+              <li>50 Materials</li>
+              <li>1 Location</li>
+              <li>Unlimited Orders</li>
+            </ul>
+            <a href="#" class="mt-5 inline-block w-full text-center bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg">Start</a>
+          </div>
+
+          <div class="p-6 rounded-2xl border-2 border-primary-600 shadow-glow">
+            <div class="text-sm font-semibold text-primary-600">Basic Plan (Growth)</div>
+            <div class="mt-2 text-3xl font-extrabold">
+              <span data-monthly>$44</span>
+              <span data-annual class="hidden">$24</span>
+              <span class="text-base font-medium text-slate-500">/user/month</span>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <li>2 users</li>
+              <li>500 Products</li>
+              <li>500 Materials</li>
+              <li>Smart Alerts Notifications (Warning & Critical)</li>
+              <li>5 Locations</li>
+              <li>Exports CSV, PDF Reports: Stock, Sales, Costs</li>
+              <li>Unlimited Orders</li>
+            </ul>
+            <a href="#" class="mt-5 inline-block w-full text-center bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg">Start</a>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+            <div class="text-sm font-semibold text-slate-500">Teams</div>
+            <div class="mt-2 text-3xl font-extrabold">
+              <span data-monthly>$160</span>
+              <span data-annual class="hidden">$80</span>
+              <span class="text-base font-medium text-slate-500">/user/month</span>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <li>8 users</li>
+              <li>5000 Products</li>
+              <li>5000 Materials</li>
+              <li>Smart Alerts Notifications (Warning & Critical)</li>
+              <li>10 Locations</li>
+              <li>Exports CSV, PDF Reports: Stock, Sales, Costs</li>
+              <li>Unlimited Orders</li>
+              <li>Order Invoicing (Beta)</li>
+            </ul>
+            <a href="#" class="mt-5 inline-block w-full text-center bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg">Contact Sales</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-center">Frequently asked questions</h2>
+          <div class="mt-8 grid md:grid-cols-2 gap-6 text-sm">
+            <div>
+              <div class="font-semibold">Is there a free trial?</div>
+              <p class="text-slate-600 dark:text-slate-300">Yes, the Starter plan is free forever. As you grow, you can upgrade to a paid plan.</p>
+            </div>
+            <div>
+              <div class="font-semibold">Can I switch plans later?</div>
+              <p class="text-slate-600 dark:text-slate-300">Absolutely. Upgrade or downgrade anytime.</p>
+            </div>
+            <div>
+              <div class="font-semibold">Do you offer support?</div>
+              <p class="text-slate-600 dark:text-slate-300">Email support for all plans; priority for Teams.</p>
+            </div>
+            <div>
+              <div class="font-semibold">Do prices include taxes?</div>
+              <p class="text-slate-600 dark:text-slate-300">Taxes are added where applicable based on your location.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-sm">
+          <div>
+            <div class="font-semibold mb-2">Main Pages</div>
+            <ul class="space-y-1">
+              <li><a href="./index.html" class="hover:text-primary-600">Home</a></li>
+              <li><a href="./pricing.html" class="hover:text-primary-600">Price</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-semibold mb-2">Community</div>
+            <ul class="space-y-1">
+              <!-- Blog dropdown temporarily disabled
+              <li><a href="./blog/index.html" class="hover:text-primary-600">Blog</a></li>
+              -->
+              <li><a href="./blog/rss.xml" class="hover:text-primary-600">RSS Feed</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-semibold mb-2">Company</div>
+            <ul class="space-y-1">
+              <li><a href="./contact.html" class="hover:text-primary-600">Contact</a></li>
+              <li><a href="./privacy.html" class="hover:text-primary-600">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-semibold mb-2">Get the App</div>
+            <div class="flex items-center gap-2">
+              <a href="https://play.google.com/store/apps/details?id=com.flipinventory.app" aria-label="Get on Google Play"><img src="./assets/badges/google-play.svg" class="h-8" alt="Google Play" /></a>
+              <a href="https://apps.apple.com/tr/app/flip-inventory/id6692609544" aria-label="Download on App Store"><img src="./assets/badges/app-store.svg" class="h-8" alt="App Store" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 text-xs text-slate-500">© <span id="year"></span> Flip Inventory. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script defer src="./assets/js/main.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      (function () {
+        const toggle = document.getElementById('billingToggle');
+        if (!toggle) return;
+        function apply() {
+          var yearly = !!toggle.checked;
+          document.querySelectorAll('[data-monthly]').forEach(function(el){
+            el.classList.toggle('hidden', yearly);
+          });
+          document.querySelectorAll('[data-annual]').forEach(function(el){
+            el.classList.toggle('hidden', !yearly);
+          });
+        }
+        ['change','input','click'].forEach(function(evt){ toggle.addEventListener(evt, apply); });
+        apply();
+      })();
+    </script>
+  </body>
+  </html>
+
+
