@@ -187,10 +187,10 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    // Follow user's system/browser theme by default
     initTheme();
     initNav();
-    injectThemeToggleFab();
-    initThemeToggle();
+    // No manual theme switch button; do not inject FAB
     initRevealAnimations();
     initSmoothScroll();
     initPricingToggle();
