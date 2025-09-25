@@ -204,6 +204,14 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+  function bumpBaseFontSize() {
+    try {
+      // Slightly increase root font size from default 16px → 17px
+      // This scales all Tailwind rem-based typography consistently
+      document.documentElement.style.fontSize = '17px';
+    } catch (_) {}
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     // Follow user's system/browser theme by default
     initTheme();
@@ -213,6 +221,7 @@
     initSmoothScroll();
     initPricingToggle();
     initAutoHideHeader();
+    bumpBaseFontSize();
   });
 })();
 
