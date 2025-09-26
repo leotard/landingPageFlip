@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script>tailwind.config = { darkMode: 'class' };</script>
   </head>
   <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
@@ -41,15 +41,57 @@
     <main>
       <article class="prose prose-slate dark:prose-invert max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1>Prevent stockouts with smart alerts</h1>
-        <p><em>Learn how Warning and Critical alerts help you act before items run out.</em></p>
-        <h2>Two alert types</h2>
-        <p>Flip Inventory provides <strong>Warning</strong> and <strong>Critical</strong> alerts to keep you ahead.</p>
+        <p><em>Flip keeps you ahead of demand by flagging risk early—so you reorder on time, not in panic.</em></p>
+
+        <h2>How Flip decides when to alert</h2>
+        <p>Alerts use a simple, reliable picture of your real availability.</p>
         <ul>
-          <li><strong>Warning</strong>: we consider quantities already committed through open orders. If on‑hand minus committed approaches your minimum, we warn you.</li>
-          <li><strong>Critical</strong>: when on‑hand is below your set minimum, we raise a critical alert.</li>
+          <li><strong>On‑hand</strong>: what you physically have now.</li>
+          <li><strong>Committed</strong>: quantities already promised on open sales/orders.</li>
+          <li><strong>Available</strong>: <code>on‑hand − committed</code>.</li>
+          <li><strong>Minimum level</strong>: the floor you set per item (often <em>lead‑time demand + safety stock</em>).</li>
         </ul>
-        <h2>Take action fast</h2>
-        <p>From an alert, you can adjust counts, create a purchase order, or transfer stock between locations to cover demand.</p>
+        <p>
+          Flip raises a <strong>Warning</strong> when <code>available ≈ minimum</code>, and a <strong>Critical</strong> alert when
+          <code>available &lt; minimum</code>. That means you act before customers feel the impact.
+        </p>
+
+        <h2>Set smart minimums (quick recipe)</h2>
+        <ol>
+          <li><strong>Lead‑time demand</strong>: average daily sales × supplier lead time (days).</li>
+          <li><strong>Safety stock</strong>: 1–2 weeks of sales, or use your demand variability.</li>
+          <li><strong>Minimum</strong> = lead‑time demand + safety stock.</li>
+        </ol>
+        <p>Example: sell 5/day, 10‑day lead time, 1‑week safety stock (35 units) → minimum = <strong>85</strong>.</p>
+
+        <h2>What an alert tells you (and what to do)</h2>
+        <ul>
+          <li><strong>Warning</strong>: order soon. Create a purchase order sized to cover lead‑time demand + buffer.</li>
+          <li><strong>Critical</strong>: act now. Transfer from another location, expedite a vendor order, or adjust counts if a discrepancy caused the drop.</li>
+        </ul>
+
+        <h2>Workflow that prevents surprises</h2>
+        <ol>
+          <li>Review today’s alerts each morning (takes minutes).</li>
+          <li>For each alert, choose: <em>Purchase</em>, <em>Transfer</em>, or <em>Adjust</em>.</li>
+          <li>After receiving or transferring, Flip updates availability automatically.</li>
+        </ol>
+
+        <h2>Real‑world examples</h2>
+        <ul>
+          <li><strong>Seasonal spikes</strong>: raise minimums for SKUs with upcoming promos; lower afterward to avoid overstock.</li>
+          <li><strong>Multi‑location</strong>: a store is critical, warehouse has surplus—transfer beats rush shipping.</li>
+          <li><strong>Bundles/kits</strong>: watch components; a single missing trim can block finished goods.</li>
+        </ul>
+
+        <h2>Get started in five minutes</h2>
+        <ol>
+          <li>Pick top 10 sellers and add minimums using the recipe above.</li>
+          <li>Turn on alerts for email or in‑app notifications.</li>
+          <li>Create a simple weekly review: adjust minimums as sales shift.</li>
+        </ol>
+
+        <p><strong>Result:</strong> fewer fire drills, steadier cash flow, and happier customers.</p>
       </article>
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         <a href="./index.html" class="text-primary-600">← Back to blog</a>

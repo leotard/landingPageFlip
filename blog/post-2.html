@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script>tailwind.config = { darkMode: 'class' };</script>
   </head>
   <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
@@ -41,16 +41,46 @@
     <main>
       <article class="prose prose-slate dark:prose-invert max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1>From spreadsheets to Flip</h1>
-        <p><em>A simple path to accurate inventory without the busywork.</em></p>
-        <h2>Why move?</h2>
-        <p>Spreadsheets are flexible but fragile. Flip gives you orders, alerts, and automatic updates that keep data trustworthy.</p>
-        <h2>Quick start</h2>
+        <p><em>A practical migration guide to accurate, low‑maintenance inventory.</em></p>
+
+        <h2>Why teams outgrow spreadsheets</h2>
+        <ul>
+          <li><strong>Single‑user bottlenecks</strong>: edits collide, versions drift.</li>
+          <li><strong>No order workflow</strong>: hard to track what’s reserved, received, or shipped.</li>
+          <li><strong>Error‑prone math</strong>: fragile formulas and hidden filters cause misses.</li>
+        </ul>
+
+        <h2>What you get with Flip</h2>
+        <ul>
+          <li><strong>True availability</strong>: on‑hand minus committed, per location.</li>
+          <li><strong>Purchase & sales orders</strong>: status‑driven updates to counts—no manual edits.</li>
+          <li><strong>Smart alerts</strong>: warning/critical thresholds to prevent stockouts.</li>
+        </ul>
+
+        <h2>Migration in one afternoon</h2>
         <ol>
-          <li>Import your items with current counts.</li>
-          <li>Set minimums for critical items.</li>
-          <li>Create your first purchase or sales order.</li>
+          <li><strong>Export</strong> your items CSV: SKU, name, location, on‑hand.</li>
+          <li><strong>Clean</strong> obvious duplicates and mismatched SKUs.</li>
+          <li><strong>Import</strong> into Flip and map columns.</li>
+          <li><strong>Set minimums</strong> for your top sellers using lead‑time + safety stock.</li>
+          <li><strong>Create</strong> your first purchase order for anything already below minimum.</li>
         </ol>
-        <p>As you complete orders, Flip keeps inventory levels accurate across locations.</p>
+
+        <h2>Avoid these pitfalls</h2>
+        <ul>
+          <li><strong>Mixed SKU formats</strong>: standardize before import; future you will thank you.</li>
+          <li><strong>Stale open orders</strong>: enter any outstanding POs/SOs so availability is correct day one.</li>
+          <li><strong>One giant location</strong>: set up real locations to enable fast transfers and accurate alerts.</li>
+        </ul>
+
+        <h2>After go‑live: keep it simple</h2>
+        <ol>
+          <li>Review alerts daily; turn them into purchase orders or transfers.</li>
+          <li>Revisit minimums weekly for top movers; monthly for the long tail.</li>
+          <li>Archive dead SKUs quarterly to keep reports snappy.</li>
+        </ol>
+
+        <p><strong>Outcome:</strong> reliable counts, fewer emergencies, and a team that spends time selling—not fixing sheets.</p>
       </article>
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         <a href="./index.html" class="text-primary-600">← Back to blog</a>

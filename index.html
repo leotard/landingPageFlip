@@ -100,7 +100,7 @@
       <div class="absolute -top-24 -left-24 h-72 w-72 bg-primary-500 rounded-full blur-3xl opacity-20"></div>
       <div class="absolute -bottom-24 -right-24 h-72 w-72 bg-cyan-500 rounded-full blur-3xl opacity-20"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div class="grid lg:grid-cols-2 items-center gap-20">
+        <div class="grid lg:grid-cols-2 items-start gap-20">
           <div data-animate>
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">Track</h1>
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">Your Inventory</h1>
@@ -110,6 +110,15 @@
             <div class="mt-5 flex items-center gap-3">
               <a href="https://play.google.com/store/apps/details?id=com.flipinventory.app" aria-label="Get on Google Play"><img src="./assets/badges/google-play.svg" class="h-12" alt="Google Play" /></a>
               <a href="https://apps.apple.com/tr/app/flip-inventory/id6692609544" aria-label="Download on App Store"><img src="./assets/badges/app-store.svg" class="h-12" alt="App Store" /></a>
+            </div>
+            <div class="mt-6 hidden md:flex items-center gap-4" aria-label="Scan QR to get the app">
+              <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3 shadow-sm">
+                <img src="./assets/QRCode.svg" alt="QR code to install Flip Inventory on your phone" class="h-32 w-32" />
+              </div>
+              <div class="text-sm text-slate-600 dark:text-slate-300">
+                <div class="font-semibold">On desktop?</div>
+                <div>Scan to open the App Store or Google Play on your phone.</div>
+              </div>
             </div>
             <div class="mt-6 flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
               <div class="flex items-center gap-1"><span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span> No credit card</div>
